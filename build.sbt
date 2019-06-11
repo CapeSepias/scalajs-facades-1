@@ -1,7 +1,9 @@
 import sys.process._
 
 
-ThisBuild / scalaVersion := "2.12.8"
+ThisBuild / crossScalaVersions := Seq("2.12.8", "2.13.0")
+ThisBuild / scalaVersion := (ThisBuild / crossScalaVersions).value.last
+
 ThisBuild / organization := "io.github.nafg.scalajs-facades"
 
 publish / skip := true
